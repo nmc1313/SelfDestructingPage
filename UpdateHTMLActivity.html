@@ -1,0 +1,31 @@
+<html>
+<body id='background'>
+    <div>
+        <h1 id='title'>Welcome!</h1>
+    </div>
+</body>
+
+<script>
+    //created an ID for the title so that we can access it using JavaScript now.
+    //Manipulate title to make a timer countdown that turns red once it hits 0
+const title = document.getElementById('title');
+var time = 10; 
+const getTime = () => {
+    if(time>0){
+    time = time - 1;}
+    title.innerHTML = 'This page will end in ' + time + ' seconds';
+    if(time === 0){
+        const background = document.getElementById('background');
+        background.style = 'background-color: red';
+    }
+}
+setInterval(getTime, 1000);
+
+
+
+
+
+</script>
+
+
+</html>
